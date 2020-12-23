@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+	outline: none;
+}
+body{
+	min-height: 100vh;
+	background: #16405c;
+}
+header{
+	background: #102c3f;
+	padding: 2rem;
+	display: flex;
+	justify-content: center;
+}
+.search{
+	padding: 1rem 4rem;
+	border-radius: 10px;
+	border: 1px solid #2272a7;
+	font-size: 20px;
+	background: none;
+	box-shadow: 0px 0px 10px #2272a7;
+	color: #ffffff;
+	letter-spacing: 2px;
+	cursor: pointer;
+}
+.search::placeholder{
+	color: #ffffff;
+}
+form i{
+	color: #ffffff;
+	font-size: 20px;
+	padding: 1.3rem 1.5rem;
+	border: 1px solid #2272a7;
+	box-shadow: 0px 0px 10px #2272a7;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: 0.5s;
+}
+form input:hover,
+form i:hover{
+	transition: 0.5s;
+	box-shadow: 
+	inset 0px 0px 10px #2272a7,
+	0px 0px 10px #2272a7;
+}
+main{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	border-radius: 50%;
+}
+.movie{
+	width: 300px;
+	cursor: pointer;
+	border-radius: 5px;
+	background: #2272a7;
+	transition: 0.5s;
+	border-radius: 10px;
+	margin: 1rem;
+	overflow: hidden;
+	position: relative;
+}
+.movie img{
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	width: 100%;
+	max-width: 100%;
+	object-fit: cover;
+	transition: 0.5s;
+	height: 400px;
+}
+.noImage{
+	height: 400px !important;
+	object-fit: none !important;
+	width: 100% !important;
+	background: #1d5d88;
+}
+.movie:hover{
+	transform: scale(1.015);
+	box-shadow: 
+	0px 0px 15px #E442FF,
+	0px 0px 30px #E442FF;
+}
+.movie-info{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: #ffffff;
+	font-size: 1.2rem;
+	transition: 0.5s;
+	padding: 1rem;
+	font-weight: normal;
+}
+.movie-info h3{
+	letter-spacing: 1px;
+	margin: 0;
+	overflow: hidden;
+}
+.green{
+	color: #09ff00;
+}
+.orange{
+	color: #ff9100;
+}
+.red{
+	color: #ff0000;
+}
+.movie:hover .movie-info,
+.movie:hover .red,
+.movie:hover .orange,
+.movie:hover .greeno{
+	color: #E442FF !important;
+}
+.movie-info h3{
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.overview{
+	color: #ffffff;
+	padding: 1rem;
+	font-size: 18px;
+	color: #ffffff;
+	transition: 0.5s;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.5);
+	transform: translateX(100%);
+	max-height: 100%;
+	overflow: auto;
+}
+.movie:hover .overview{
+	color: #fff;
+	transform: translateX(0%);
+}
+footer{
+	padding-top: 1rem;
+	width: 100%;
+	margin: auto;
+	color: #ffffff;
+	position: relative;
+}
+footer p{
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+@media (max-width: 550px){
+	.form{
+		width: 95%;
+	}
+	header{
+		flex-direction: row;
+	}
+	.search{
+		width: 80%;
+	}
+}
+@media (max-width: 460px){
+	.search{
+		width: 70%;
+		padding-left: 15px;
+	}
+}
